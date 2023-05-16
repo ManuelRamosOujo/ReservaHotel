@@ -6,11 +6,11 @@ package com.mycompany.reservahotel;
  */
 public abstract class Habitacion {
     private int nHabitacion;
-    private String estado;
+    private boolean estado;
     private double precio;
     private String serviciosAdicionales;
 
-    public Habitacion(int nHabitacion, String estado, double precio, String serviciosAdicionales) {
+    public Habitacion(int nHabitacion, boolean estado, double precio, String serviciosAdicionales) {
         this.nHabitacion = nHabitacion;
         this.estado = estado;
         this.precio = precio;
@@ -21,7 +21,7 @@ public abstract class Habitacion {
         return nHabitacion;
     }
 
-    public String getEstado() {
+    public boolean getEstado() {
         return estado;
     }
 
@@ -37,7 +37,7 @@ public abstract class Habitacion {
         this.nHabitacion = nHabitacion;
     }
 
-    public void setEstado(String estado) {
+    public void setEstado(boolean estado) {
         this.estado = estado;
     }
 

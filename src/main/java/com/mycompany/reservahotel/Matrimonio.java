@@ -7,7 +7,7 @@ package com.mycompany.reservahotel;
 public class Matrimonio extends Habitacion{
     private String tamañoCama;
 
-    public Matrimonio(String tamañoCama, int nHabitacion, String estado, double precio, String serviciosAdicionales) {
+    public Matrimonio(String tamañoCama, int nHabitacion, boolean estado, double precio, String serviciosAdicionales) {
         super(nHabitacion, estado, precio, serviciosAdicionales);
         this.tamañoCama = tamañoCama;
     }

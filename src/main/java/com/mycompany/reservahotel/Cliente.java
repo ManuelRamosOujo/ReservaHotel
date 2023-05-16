@@ -48,6 +48,4 @@ public class Cliente {
         this.telefono = telefono;
         this.direccion = direccion;
     }
-    
-    
 }

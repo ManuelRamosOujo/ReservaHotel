@@ -1,5 +1,8 @@
 package com.mycompany.reservahotel;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+
 /* @author Manuel 
  * @date 12/05/2023
  * @time 14:22:18
@@ -10,6 +13,7 @@ public class Trabajador {
     private int telefono;
     private double horasTrabajadas;
     private String DNI;
+    private ArrayList<Reserva> reservas;
 
     public int getIdRecep() {
         return idRecep;
@@ -51,7 +55,8 @@ public class Trabajador {
         this.DNI = DNI;
     }
 
-    public Trabajador(int idRecep, String nome, int telefono, double horasTrabajadas, String DNI) {
+    public Trabajador(int idRecep, String nome, int telefono,
+            double horasTrabajadas, String DNI) {
         this.idRecep = idRecep;
         this.nome = nome;
         this.telefono = telefono;
@@ -66,5 +71,14 @@ public class Trabajador {
         this.DNI = DNI;
     }
 
+    public void addReserva(int idReserva, LocalDate fechaInicio, int duracion){
+        Reserva reserva = new Reserva(idReserva,fechaInicio,duracion);
+        reserva.setFechaFin(reserva.getFechaInicio(),duracion);
+        reservas.add(reserva);
+        System.out.println(reservas.get(idReserva));
+    }
     
+    public void deleteReserva(int idReserva){
+        reservas.remove(idReserva);
+    }
 }

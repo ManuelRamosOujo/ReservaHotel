@@ -20,7 +20,7 @@ public class Doble extends Habitacion{
         this.tamañoCama = tamañoCama;
     }
 
-    public Doble(String tamañoCama, int nHabitacion, String estado, double precio, String serviciosAdicionales) {
+    public Doble(String tamañoCama, int nHabitacion, boolean estado, double precio, String serviciosAdicionales) {
         super(nHabitacion, estado, precio, serviciosAdicionales);
         this.tamañoCama = tamañoCama;
     }
